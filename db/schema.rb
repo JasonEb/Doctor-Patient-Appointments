@@ -11,14 +11,14 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150326233952) do
+ActiveRecord::Schema.define(version: 20150327004028) do
 
   create_table "appointments", force: :cascade do |t|
-    t.boolean  "completed"
+    t.boolean  "completed",         default: false
     t.date     "appointment_date"
     t.integer  "doctor_patient_id"
-    t.datetime "created_at",        null: false
-    t.datetime "updated_at",        null: false
+    t.datetime "created_at",                        null: false
+    t.datetime "updated_at",                        null: false
   end
 
   create_table "doctor_patients", force: :cascade do |t|

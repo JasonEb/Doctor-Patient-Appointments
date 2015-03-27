@@ -11,6 +11,8 @@
 #
 
 class Appointment < ActiveRecord::Base
+	attr_accessor :completed
+	
 	belongs_to :doctor_patient
 
 	has_many :patients, through: :doctor_patient
