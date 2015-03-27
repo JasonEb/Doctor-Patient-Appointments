@@ -51,7 +51,7 @@ class Patient < ActiveRecord::Base
 end
 ```
 
-Finally, we can have a completed appointments association. In Appointment, we have a boolean table for "completed". Using a lambda when making an association, we can filter with conditions.
+Finally, we can have a completed appointments association. In Appointment, we have a boolean column for "completed". Using a lambda when making an association, we can filter with conditions.
 ```ruby
 class Doctor < ActiveRecord::Base
 	has_many :doctor_patients
