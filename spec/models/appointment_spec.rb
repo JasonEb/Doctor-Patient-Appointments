@@ -1,3 +1,15 @@
+# == Schema Information
+#
+# Table name: appointments
+#
+#  id                :integer          not null, primary key
+#  completed         :boolean
+#  appointment_date  :date
+#  doctor_patient_id :integer
+#  created_at        :datetime         not null
+#  updated_at        :datetime         not null
+#
+
 require 'rails_helper'
 
 RSpec.describe Appointment, :type => :model do
