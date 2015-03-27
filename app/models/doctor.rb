@@ -13,7 +13,8 @@ class Doctor < ActiveRecord::Base
 	has_many :patients, through: :doctor_patients
 	has_many :appointments, through: :doctor_patients
 
-	has_many :completed_appointments, -> { where(completed: true)}, :through => :appointments 
-	 
 
+	has_many :completed_appointments,  -> { where(completed: true)}, 
+		through: :doctor_patients,
+		source: :appointments
 end

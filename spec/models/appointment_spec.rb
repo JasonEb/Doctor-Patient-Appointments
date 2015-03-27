@@ -3,7 +3,7 @@
 # Table name: appointments
 #
 #  id                :integer          not null, primary key
-#  completed         :boolean
+#  completed         :boolean          default("f")
 #  appointment_date  :date
 #  doctor_patient_id :integer
 #  created_at        :datetime         not null

@@ -3,7 +3,7 @@
 # Table name: appointments
 #
 #  id                :integer          not null, primary key
-#  completed         :boolean
+#  completed         :boolean          default("f")
 #  appointment_date  :date
 #  doctor_patient_id :integer
 #  created_at        :datetime         not null
@@ -11,8 +11,6 @@
 #
 
 class Appointment < ActiveRecord::Base
-	attr_accessor :completed
-	
 	belongs_to :doctor_patient
 
 	has_many :patients, through: :doctor_patient
